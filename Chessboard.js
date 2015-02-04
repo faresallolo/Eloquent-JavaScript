@@ -1,4 +1,4 @@
-/* This is the way I found to solve it (kinda). There are probably easier ways to do this, */
+/* In this exercise we must create a string that represents a chessboard with "#"'s and empty spaces */
  
 var boardwidth = 8, boardheight = 5, board = "";
  
