@@ -28,7 +28,6 @@ function range(start, end, step) {
 
     /* If "step" is defined, loop builds the array, using the argument "start" as a start point */
     /* Goes up or down depending if the step is positive or negative */
-    
 	if (step < 0) {
 
 		for (var i = start ; i >= end ; i += step) {
@@ -47,7 +46,7 @@ function range(start, end, step) {
 	    _numberArray = "Nonsensical range. Re-check your values and try again";
 	}
 
-    /* Return results */
+    /* Returns results */
 	return _numberArray;
 
 }
