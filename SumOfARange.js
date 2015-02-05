@@ -42,6 +42,7 @@ function range(start, end, step) {
 	}
 	
 	/* If range is nonsensical, the array will remain empty. Deliver error message */
+	/* Ex: (14, 23, -1) - if start is 14 and end is 23, the step cannot be negative */
 	if (_numberArray[0] === undefined ) {
 	    _numberArray = "Nonsensical range. Re-check your values and try again";
 	}
