@@ -44,7 +44,7 @@ function range(start, end, step) {
 	
 	/* If range is nonsensical, the array will remain empty. Deliver error message */
 	if (_numberArray[0] === undefined ) {
-	    _numberArray = "Cannnot calculate range. Remember: 1st  number is START, 2nd is END, 3rd is the STEP.";
+	    _numberArray = "Nonsensical range. Re-check your values and try again";
 	}
 
     /* Return results */
