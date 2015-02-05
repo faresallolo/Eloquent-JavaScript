@@ -3,57 +3,63 @@ that belong to a range, and one that adds up all the numbers in that array. The 
 But when the step is negative, the program breaks */
 
 function range(start, end, step) {
+    
+    /* If no step is given, 1 is considered */
+    /* WARNING: Negative step leads to a crash */
 
-	var arrayNumber = [];
+    if (step === undefined) {
 
-	/* Checking if the user called the step. Default is 1. */
+        var arrayStep = 1;
+    }
+    
+    else {
+        var arrayStep = step;
+    }
+    
+    
+    /* Building the array */
 
-	if (step === undefined) {
-		stepNumber = 1;
-	}
+	var arrayFinal = [];
 
-	else {
-		stepNumber = step;
-	}
+	if (start > end) {
 
-	/* Now into the calculations */
+		for (var i = 0 ; i < (1 + start - end) ; i++ ) {
 
-	if (end > start) {
-
-		for ( i = 0 ; i < end - start + 1 ; i = i + stepNumber) {
-
-			arrayNumber[i] = start + i;
-
-		}
-	}
-
-	else if (start > end) {
-
-		for ( i = 0 ; i < start - end + 1; i = i + stepNumber) {
-
-			arrayNumber[i] = end + i;
+			arrayFinal[i] = i + end;
 
 		}
 	}
 
-	else {
+	else if (end > start) {
 
-		arrayNumber[0] = start;
+		for (var i = 0 ; i < (1 + end - start) ; i++) {
+
+			arrayFinal[i] = i + start;
+		}
 	}
 	
-	return arrayNumber;
+	/* If both numbers in the range are the same, array will have only start */
 
+	else {
+
+		arrayFinal = [start];
+	}
+
+	return arrayFinal;
 }
 
 
-function sum(array) {
+function arraySum(array) {
+    
+    /* Function sums up numbers in an array */
 
-	var total = 0;
+	var count = 0 ;
 
-	for ( i = 0 ; i < array.length ; i++ ) {
-		total += array[i]
+	for (var i = 0 ; i < array.length ; i++) { 
+
+		count += array[i];
+
 	}
 
-	return total;
-
+	return count;
 }
