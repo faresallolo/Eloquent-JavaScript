@@ -5,15 +5,14 @@ function sum(array) {
 	for (var i = 0 ; i < array.length ; i++) { 
 		count += array[i];
 	}
-
 	return count;
 }
 
 function range(start, end, step) {
-
+	
     /* Declaring array */
 	var _numberArray = [];
-
+	
     /* If "step" is not defined, it's either +1 or -1, depending if the count is going up or down */
 	if (!step) {
        
