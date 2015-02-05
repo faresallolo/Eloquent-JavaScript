@@ -16,14 +16,14 @@ function range(start, end, step) {
 
     /* If "step" is not defined, it's either +1 or -1, depending if the count is going up or down */
 	if (!step) {
+       
+        	if (start > end) {
+            		step = -1;
+        	}
         
-        if (start > end) {
-            step = -1;
-        }
-        
-        else {
-		step = 1;
-        }
+        	else {
+			step = 1;
+        	}
 	}
 
     /* If "step" is defined, loop builds the array, using the argument "start" as a start point */
